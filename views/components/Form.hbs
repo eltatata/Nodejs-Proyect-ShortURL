@@ -1,0 +1,16 @@
+{{!-- form para editar una url --}}
+{{#if url}}
+    <form action="/editar/{{url._id}}" method="POST">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}" />
+        <input value="{{url.origin}}" type="text" placeholder="Enter the url" name="origin" class="form-control my-5">
+        <button type="submit" class="btn btn-warning w-100 mb-5">update URL</button>
+    </form>
+
+{{else}}
+    {{!-- form para crear una nueva url --}}
+    <form action="/" method="POST">
+        <input type="hidden" name="_csrf" value="{{csrfToken}}" />
+        <input type="text" placeholder="Enter the url" name="origin" class="form-control my-5">
+        <button type="submit" class="btn btn-primary w-100 mb-5">Add URL</button>
+    </form>
+{{/if}}

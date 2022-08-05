@@ -1,0 +1,12 @@
+<h1>Login for users</h1>
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <form action="/auth/login" method="POST">
+            <input type="hidden" name="_csrf" value="{{csrfToken}}" />
+            <input value="email@gmail.com" type="text" name="userEmail" class="form-control  mb-2" placeholder="Enter your email">
+            <input value="999666" type="password" name="userPassword" class="form-control  mb-2" placeholder="Enter your password">
+            <button class="btn btn-primary">Login</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<h1 class="text-center">{{user.name}}</h1>
+<p class="text-center">Edit your Profile</p>
+<div class="my-2 text-center">
+    {{#if img}}
+        <img src="/images/profiles/{{img}}" alt="" class="rounded-circle">
+        {{else}}
+        <img src="/images/profiles/perfil.jpg" alt="" class="rounded-circle">
+    {{/if}}
+</div>
+
+<form action="/profile?_csrf={{csrfToken}}" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}" />
+    <input class="form-control form-control-sm" id="formFileSm" type="file" name="myFile">
+    <button class="btn btn-dark my-3">Change Image</button>
+</form>
