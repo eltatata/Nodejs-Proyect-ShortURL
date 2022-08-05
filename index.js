@@ -82,6 +82,7 @@ app.set("views", "./views");
 
 
 // leer el body de la peticion
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // hablilitar las protecciones
