@@ -58,7 +58,7 @@ const registerUser = async (req, res) => {
                 from: '"Fred Foo 👻" <foo@example.com>', // sender address
                 to: user.email, // list of receivers
                 subject: "Verfica tu cuenta de correo", // Subject line
-                html: `<a href="${process.env.PATHHEROKU || "http://localhost:3000"}/auth/confirm/${user.tokenConfirm}">Verificar correo electronico</a>`, // html body
+                html: `<a href="${process.env.PATHHEROKU || "http://localhost:3000"}auth/confirm/${user.tokenConfirm}">Verificar correo electronico</a>`, // html body
             });
             
             // no es un error en un mensaje al user            
