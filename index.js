@@ -18,13 +18,13 @@ require('dotenv').config();
 const clientDB = require("./database/db");
 
 // midlewares
-app.use(cors());
-
 const corsOptions = {
     credentials: true,
     origin: process.env.PATHHEROKU || "*",
     methods: ['GET', 'POST']
 }
+
+app.use(cors(corsOptions));
 
 // configurar/utilizar sessiones
 app.set("trust proxy", 1);
